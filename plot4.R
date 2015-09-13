@@ -20,7 +20,7 @@ HPCData2[,"Global_active_power"] <- as.numeric(HPCData2[,"Global_active_power"])
 HPCData2[,"Voltage"] <- as.numeric(HPCData2[,"Voltage"])
 HPCData2[,"Global_reactive_power"] <- as.numeric(HPCData2[,"Global_reactive_power"])
 
-## Change the class of date and time to "POSIXct
+## Change the class of date and time to POSIXct
 DT <- paste(as.Date(HPCData2$Date), HPCData2$Time)
 HPCData2$DT <- as.POSIXct(DT)
 
