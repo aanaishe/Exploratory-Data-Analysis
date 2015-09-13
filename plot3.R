@@ -15,7 +15,7 @@ HPCData[,"Date"] <- as.Date(HPCData[,"Date"], "%d/%m/%Y")
 DesiredDates = as.Date(c("2007-02-01","2007-02-02"))
 HPCData2 = subset(HPCData, HPCData[,"Date"] %in% DesiredDates)
 
-## Change the class of Global active power from character to numeric
+## Change the class of Global_active_power from character to numeric
 HPCData2[,"Global_active_power"] <- as.numeric(HPCData2[,"Global_active_power"])
 
 ## Change the class of date and time to POSIXct
