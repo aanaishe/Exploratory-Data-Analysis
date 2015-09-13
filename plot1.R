@@ -10,7 +10,7 @@ if (!file.exists('Coursera/exdata-data-household_power_consumption.zip')) {
 HPCData <- read.csv2("Coursera/household_power_consumption.txt", na.strings="?", stringsAsFactors = FALSE)
 head(HPCData)
 
-## Select the information with the desired dates "2007-02-01" and "2007-02-02"
+## Select the information that corresponds to the desired dates "2007-02-01" and "2007-02-02"
 HPCData[,"Date"] <- as.Date(HPCData[,"Date"], "%d/%m/%Y")
 DesiredDates = as.Date(c("2007-02-01","2007-02-02"))
 HPCData2 = subset(HPCData, HPCData[,"Date"] %in% DesiredDates)
